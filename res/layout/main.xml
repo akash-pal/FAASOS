@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout  
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:id="@+id/top_control_bar">
+		
+        
+        <!-- Editext for Search -->
+        <EditText android:id="@+id/inputSearch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Search"/>
+
+        <TextView
+        android:id="@+id/menu_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menu"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_alignParentLeft="true" 
+        android:layout_below="@+id/inputSearch"/>
+        
+        <TextView
+        android:id="@+id/veg_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VEG"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_toLeftOf="@+id/switch1" 
+        android:layout_below="@+id/inputSearch"/>
+        
+		
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inputSearch"
+            android:layout_alignParentRight="true"
+            android:paddingLeft="5dp" />
+    
+    </RelativeLayout>
+    
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/top_control_bar"
+        android:layout_above="@+id/bottom_bar" >
+    </ListView>
+        
+
+    
+    <LinearLayout 
+       android:id="@+id/bottom_bar" 
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_alignParentBottom="true"
+       android:paddingTop="4dp">
+
+        
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="2dp" 
+            android:stretchColumns="*"
+            android:layout_weight="1.0">
+     
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0" >
+                
+                
+            <TextView
+          		android:id="@+id/count_tag"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:text="Menu Item:"
+          		android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+            <TextView
+          		android:id="@+id/count"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+            
+            <TextView
+          		android:id="@+id/api_hits_tag"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:text="Api Hits:"
+          		android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+             
+            <TextView
+          		android:id="@+id/apihit"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:textAppearance="?android:attr/textAppearanceMedium" />
+                  
+            </TableRow>
+            
+            
+            
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" 
+                android:layout_weight="1.0">
+                
+                
+            <TextView
+          		android:id="@+id/textView1"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:text="Sort By:"
+          		android:textAppearance="?android:attr/textAppearanceMedium" />
+               
+       		
+       		<Button
+          		android:id="@+id/sort_price"
+          		android:layout_width="wrap_content"
+          		android:layout_height="wrap_content"
+          		android:text="Price"
+          		android:onClick="sortPrice" />
+
+       		<Button
+           		android:id="@+id/sort_rating"
+           		android:layout_width="wrap_content"
+           		android:layout_height="wrap_content"
+           		android:onClick="sortRating"
+           		android:text="Rating" />
+                
+            </TableRow>
+
+           
+        </TableLayout>
+
+       
+       
+    </LinearLayout>
+    
+        
+    
+</RelativeLayout>

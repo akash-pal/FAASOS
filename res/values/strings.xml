@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">FAASOS</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_booking_history">Liked Items</string>
+    <string name="title_single_menu_item_activity">Details</string>
+    
+
+</resources>

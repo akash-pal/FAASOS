@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" 
+  android:orientation="horizontal"
+  android:padding="5dip">
+    
+  <LinearLayout
+        android:id="@+id/thumbnail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"  
+        android:layout_alignParentTop="true"      
+        android:layout_marginRight="5dip" >
+      
+    <ImageView 
+        android:id="@+id/image_list"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_photo_black_24dp" />   
+           
+  </LinearLayout>  
+  
+      
+       <!-- Name Label -->
+  
+  <TextView
+      android:id="@+id/name_list"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#43bd00"
+      android:textSize="15dip"
+      android:textStyle="bold"
+      android:layout_toRightOf="@+id/thumbnail"
+      android:layout_marginTop="16dp" />
+
+  <!-- Rate Label -->
+  <TextView 
+      android:id="@+id/price_list"      
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="10dip"
+      android:textColor="#acacac"
+      android:layout_toRightOf="@+id/thumbnail"
+      android:layout_below="@+id/name_list"
+      android:paddingRight="10dip"/>
+  
+
+  <RatingBar
+    android:id="@+id/ratingBar_spice_list"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    style="?android:attr/ratingBarStyleSmall"
+    android:stepSize="1"
+    android:max="3"
+    android:numStars="3"
+    android:isIndicator="true" 
+    android:clickable="false" 
+    android:layout_toRightOf="@+id/price_list"
+    android:layout_below="@+id/name_list"/>
+      
+      
+      
+  
+</RelativeLayout>
